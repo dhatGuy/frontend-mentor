@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+body {
+  background-color: hsl(30deg, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+body .card {
+  max-width: 300px;
+  overflow: hidden;
+  margin: auto;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+body .card .card-image img {
+  width: 100%;
+}
+body .card .card-image :last-child {
+  display: none;
+}
+body .card .card-content {
+  padding: 20px;
+}
+body .card .card-content .card-header h1 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-size: 22px;
+}
+body .card .card-content .card-header p {
+  font-size: 10px;
+  color: hsl(158deg, 36%, 37%);
+  letter-spacing: 5px;
+}
+body .card .card-content .card-body {
+  font-size: 14px;
+}
+body .card .card-content .card-body p {
+  color: hsl(228deg, 12%, 48%);
+}
+body .card .card-content .card-body div {
+  color: hsl(158deg, 36%, 37%);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+body .card .card-content .card-body div span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+body .card .card-content .card-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+body .card .card-content .card-footer button {
+  background-color: hsl(158deg, 36%, 37%);
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+body .card .card-content .card-footer button:hover {
+  background-color: hsl(212deg, 21%, 14%);
+}
+body .card .card-content .card-footer button img {
+  width: 15px;
+  height: 15px;
+}
+@media (min-width: 768px) {
+  body .card {
+    display: flex;
+    flex-direction: row;
+    max-width: 450px;
+  }
+  body .card .card-image :first-child {
+    display: none;
+  }
+  body .card .card-image :last-child {
+    display: block;
+  }
+  body .card .card-image img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body .card .card-content {
+    max-width: 50%;
+  }
+  body .card .card-content h1 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  body .card .card-content p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 10px 0;
+}
+body .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=styles.css.map */

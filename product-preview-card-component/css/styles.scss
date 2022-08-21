@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+
+$dark-cyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$very-dark-blue: hsl(212, 21%, 14%);
+$dark-greyish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+$fraunces: "Fraunces", serif;
+$montserrat: "Montserrat", sans-serif;
+$p-font: 14px;
+
+@mixin flexContainer($direction, $justify: null, $align: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+body {
+  background-color: $cream;
+  font-family: $montserrat;
+  min-height: 100vh;
+  margin: 0;
+
+  @include flexContainer(column, center, center);
+  gap: 10px;
+
+  .card {
+    max-width: 300px;
+    overflow: hidden;
+
+    margin: auto;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    .card-image {
+      img {
+        width: 100%;
+      }
+
+      :last-child {
+        display: none;
+      }
+    }
+
+    .card-content {
+      padding: 20px;
+
+      .card-header {
+        h1 {
+          margin: 0;
+          font-family: $fraunces;
+          font-size: 22px;
+        }
+        p {
+          font-size: 10px;
+          color: $dark-cyan;
+          letter-spacing: 5px;
+        }
+      }
+
+      .card-body {
+        font-size: $p-font;
+
+        p {
+          color: $dark-greyish-blue;
+        }
+
+        div {
+          color: $dark-cyan;
+          font-size: 20px;
+          font-weight: 700;
+          font-family: $fraunces;
+
+          @include flexContainer(row, null, center);
+          gap: 10px;
+
+          span {
+            font-family: $montserrat;
+            font-size: 10px;
+            font-weight: normal;
+            text-decoration: line-through;
+          }
+        }
+      }
+
+      .card-footer {
+        @include flexContainer(column, center);
+
+        margin-top: 10px;
+
+        button {
+          background-color: $dark-cyan;
+          padding: 10px 0;
+          border-radius: 5px;
+          border: none;
+
+          color: $white;
+          font-weight: bold;
+          font-size: 12px;
+
+          &:hover {
+            background-color: $very-dark-blue;
+          }
+
+          @include flexContainer(row, center, center);
+          gap: 10px;
+
+          img {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      @include flexContainer(row);
+      max-width: 450px;
+
+      .card-image {
+        :first-child {
+          display: none;
+        }
+
+        :last-child {
+          display: block;
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .card-content {
+        max-width: 50%;
+
+        h1 {
+          font-size: $p-font;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: $p-font;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+
+    padding: 10px 0;
+
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
