@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+$primary: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$lightGrey: hsl(217, 12%, 63%);
+$mediumGrey: hsl(216, 12%, 54%);
+$darkBlue: hsl(213, 19%, 18%);
+$veryDarkBlue: hsl(216, 12%, 8%);
+
+$fontSize: 15px;
+
+@mixin overpassFont {
+  font-family: "Overpass", sans-serif;
+}
+
+@mixin overpassFontBold {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+}
+
+@mixin flex($direction, $justify: null, $align: null, $gap: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  @include overpassFont;
+  @include flex(column, center, center);
+
+  min-height: 100vh;
+  background-color: $veryDarkBlue;
+  margin: 0;
+
+  .rating-container {
+    @include flex(column, center, stretch, 20px);
+
+    background: linear-gradient(180deg, #252d37 0%, rgba(27, 30, 34, 0.4) 100%);
+
+    margin: auto;
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+
+    &.hide {
+      display: none;
+    }
+
+    .rating {
+      &__icon {
+        background-color: $veryDarkBlue;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+
+        @include flex(row, center, center);
+
+        img {
+          width: 50%;
+        }
+      }
+
+      &__title {
+        @include overpassFontBold;
+        font-size: 22px;
+        color: $white;
+      }
+
+      &__text {
+        font-size: $fontSize;
+        color: $lightGrey;
+        margin: 0;
+      }
+
+      &__options {
+        @include flex(row, space-between, center, 10px);
+
+        input[type="radio"] {
+          appearance: none;
+          font: inherit;
+          background-color: $veryDarkBlue;
+          color: $lightGrey;
+
+          margin: 0;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+
+          display: grid;
+          place-content: center;
+
+          @include flex(row, center, center);
+
+          font-size: 12px;
+        }
+
+        input[type="radio"]:hover::before {
+          color: $white;
+          background-color: $primary;
+        }
+
+        input[type="radio"]:checked::before {
+          color: $white;
+          background-color: $lightGrey;
+        }
+
+        input[type="radio"]::before {
+          content: attr(value);
+          width: 100%;
+          height: 100%;
+          display: grid;
+          place-content: center;
+          border-radius: 50%;
+          transition: all 0.3s ease-in;
+        }
+      }
+    }
+
+    button {
+      border: none;
+      padding: 10px;
+      border-radius: 25px;
+      background-color: $primary;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      &:hover {
+        background-color: $white;
+        color: $primary;
+      }
+    }
+  }
+
+  .thank-you-container {
+    @include flex(column, center, center, 20px);
+
+    &.hide {
+      display: none;
+    }
+
+    background: linear-gradient(180deg, #252d37 0%, rgba(27, 30, 34, 0.4) 100%);
+
+    margin: auto;
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+
+    .thank-you {
+      &__subtitle {
+        color: $primary;
+        background-color: rgba(124, 135, 152, 0.1);
+        padding: 5px 10px;
+        border-radius: 20px;
+      }
+
+      &__title {
+        @include overpassFontBold;
+        font-size: 22px;
+        color: $white;
+      }
+
+      &__text {
+        font-size: $fontSize;
+        color: $lightGrey;
+        margin: 0;
+      }
+    }
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: $lightGrey;
+    margin-bottom: 10px;
+
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
