@@ -21,9 +21,6 @@ body .card {
 body .card .card-image img {
   width: 100%;
 }
-body .card .card-image :last-child {
-  display: none;
-}
 body .card .card-content {
   padding: 20px;
 }
@@ -91,12 +88,6 @@ body .card .card-content .card-footer button img {
     display: flex;
     flex-direction: row;
     max-width: 450px;
-  }
-  body .card .card-image :first-child {
-    display: none;
-  }
-  body .card .card-image :last-child {
-    display: block;
   }
   body .card .card-image img {
     height: 100%;

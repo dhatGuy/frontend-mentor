@@ -38,10 +38,6 @@ body {
       img {
         width: 100%;
       }
-
-      :last-child {
-        display: none;
-      }
     }
 
     .card-content {
@@ -120,14 +116,6 @@ body {
       max-width: 450px;
 
       .card-image {
-        :first-child {
-          display: none;
-        }
-
-        :last-child {
-          display: block;
-        }
-
         img {
           height: 100%;
           object-fit: cover;

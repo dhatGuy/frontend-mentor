@@ -17,8 +17,13 @@
   <body>
     <div class="card">
       <div class="card-image">
-        <img src="./images/image-product-mobile.jpg" alt="Product image" />
-        <img src="./images/image-product-desktop.jpg" alt="Product image" />
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/image-product-desktop.jpg"
+          />
+          <img src="./images/image-product-mobile.jpg" alt="Product image" />
+        </picture>
       </div>
       <div class="card-content">
         <div class="card-header">
