@@ -1,0 +1,162 @@
+@import "./reset";
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+@mixin flex($direction, $justify: null, $align: null, $gap: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+/* [1] Break words when there is enough space */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  overflow-wrap: break-word; /* [1] */
+}
+
+/*
+[1] Set a maximum width for an image
+[2] Let the image cover its bounding box to avoid distortion.
+*/
+img {
+  max-width: 100%; /* [1] */
+  object-fit: cover; /* [2] */
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: $mainBG;
+  color: $cyan;
+
+  font-family: $font-family;
+
+  @include flex(column, center, center);
+
+  .card {
+    max-width: 16rem;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    margin: auto;
+
+    @include flex(column, center, center);
+
+    background-color: $cardBG;
+
+    &__image {
+      position: relative;
+      border-radius: 0.8rem;
+      cursor: pointer;
+
+      img {
+        height: 100%;
+        border-radius: inherit;
+      }
+
+      &:hover::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        border-radius: inherit;
+        background-image: url("../images/icon-view.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: opacify(rgba($cyan, 0.3), 0.1);
+      }
+    }
+
+    &__body {
+      @include flex(column, null, null, 1rem);
+      margin-top: 1rem;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.1rem;
+        border-radius: 50;
+        background-color: $lineColor;
+      }
+    }
+
+    &__title {
+      margin: 0;
+      font-weight: 600;
+      color: $white;
+      cursor: pointer;
+
+      &:hover {
+        color: $cyan;
+      }
+    }
+
+    &__subtitle {
+      margin: 0;
+      color: $cyan;
+      font-weight: 300;
+      line-height: 1.5rem;
+    }
+
+    &__info {
+      @include flex(row, space-between, center);
+
+      > div {
+        @include flex(row, null, center, 0.5rem);
+      }
+
+      :last-child span {
+        color: $softBlue;
+      }
+    }
+
+    &__footer {
+      @include flex(row, null, center, 1rem);
+
+      align-self: flex-start;
+      padding-top: 1rem;
+      color: $cyan;
+      font-weight: 300;
+      font-size: 0.85rem;
+
+      img {
+        height: 1.8rem;
+        border-radius: 50%;
+        border: 1px solid white;
+      }
+
+      span {
+        cursor: pointer;
+        color: $white;
+
+        &:hover {
+          color: $softBlue;
+        }
+      }
+    }
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 10px;
+
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
