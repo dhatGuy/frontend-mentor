@@ -237,15 +237,17 @@ body main .card__actions {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+  gap: 1rem;
 }
 body main .card__button {
   border: none;
   background-color: hsl(245deg, 75%, 52%);
-  padding: 13px;
+  padding: 10px 0;
   border-radius: 10px;
   color: white;
   font-weight: 700;
   cursor: pointer;
+  box-shadow: 0 10px 15px 0 hsl(225deg, 100%, 94%);
 }
 body main .card__button:hover {
   background-color: hsl(224deg, 23%, 55%);
@@ -253,6 +255,7 @@ body main .card__button:hover {
 body main .card__button--cancel {
   background-color: white;
   color: hsl(224deg, 23%, 55%);
+  box-shadow: none;
 }
 body main .card__button--cancel:hover {
   background-color: white;

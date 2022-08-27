@@ -93,17 +93,18 @@ body {
       }
 
       &__actions {
-        @include flex(column, center, stretch);
+        @include flex(column, center, stretch, 1rem);
       }
 
       &__button {
         border: none;
         background-color: $brightBlue;
-        padding: 13px;
+        padding: 10px 0;
         border-radius: 10px;
         color: white;
         font-weight: 700;
         cursor: pointer;
+        box-shadow: 0 10px 15px 0 $paleBlue;
 
         &:hover {
           background-color: $desaturatedBlue;
@@ -112,6 +113,7 @@ body {
         &--cancel {
           background-color: white;
           color: $desaturatedBlue;
+          box-shadow: none;
 
           &:hover {
             background-color: white;
