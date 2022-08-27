@@ -1,0 +1,133 @@
+@import "./reset";
+@import "./variables";
+
+@mixin flex($direction, $justify: null, $align: null, $gap: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+body {
+  @include flex(column, center, center);
+  min-height: 100vh;
+  font-family: $fontFamily;
+  box-sizing: border-box;
+
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $paleBlue;
+
+  @media (min-width: 375px) {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+
+  main {
+    @include flex(column, center, center);
+    margin: auto 0;
+
+    .card {
+      background-color: #fff;
+      max-width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      &__content {
+        padding: 20px;
+        text-align: center;
+
+        @include flex(column, center, stretch, 1.5rem);
+
+        h1 {
+          font-size: 1rem;
+          font-weight: 900;
+        }
+
+        p {
+          font-size: 0.8rem;
+          line-height: 1.2rem;
+          color: $desaturatedBlue;
+          font-weight: 500;
+        }
+      }
+
+      &__details {
+        @include flex(row, space-between, center);
+
+        background-color: $veryPaleBlue;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      &__subscription {
+        @include flex(row, center, center, 1rem);
+
+        img {
+          width: 50%;
+        }
+      }
+
+      &__plan {
+        :first-child {
+          font-weight: 700;
+          color: $darkBlue;
+        }
+      }
+
+      &__change {
+        p {
+          text-decoration: underline;
+          color: $brightBlue;
+          font-weight: 700;
+          cursor: pointer;
+        }
+
+        &:hover p {
+          text-decoration: none;
+          color: $desaturatedBlue;
+        }
+      }
+
+      &__actions {
+        @include flex(column, center, stretch);
+      }
+
+      &__button {
+        border: none;
+        background-color: $brightBlue;
+        padding: 13px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $desaturatedBlue;
+        }
+
+        &--cancel {
+          background-color: white;
+          color: $desaturatedBlue;
+
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}

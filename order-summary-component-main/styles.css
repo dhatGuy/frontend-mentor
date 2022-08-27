@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* [1] Break words when there is enough space */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  overflow-wrap: break-word; /* [1] */
+}
+
+/*
+[1] Set a maximum width for an image
+[2] Let the image cover its bounding box to avoid distortion.
+*/
+img {
+  max-width: 100%; /* [1] */
+  -o-object-fit: cover;
+     object-fit: cover; /* [2] */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
+  box-sizing: border-box;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(225deg, 100%, 94%);
+}
+@media (min-width: 375px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+}
+body main .card {
+  background-color: #fff;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body main .card__content {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+body main .card__content h1 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+body main .card__content p {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: hsl(224deg, 23%, 55%);
+  font-weight: 500;
+}
+body main .card__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(225deg, 100%, 98%);
+  padding: 10px;
+  border-radius: 5px;
+}
+body main .card__subscription {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+body main .card__subscription img {
+  width: 50%;
+}
+body main .card__plan :first-child {
+  font-weight: 700;
+  color: hsl(223deg, 47%, 23%);
+}
+body main .card__change p {
+  text-decoration: underline;
+  color: hsl(245deg, 75%, 52%);
+  font-weight: 700;
+  cursor: pointer;
+}
+body main .card__change:hover p {
+  text-decoration: none;
+  color: hsl(224deg, 23%, 55%);
+}
+body main .card__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+body main .card__button {
+  border: none;
+  background-color: hsl(245deg, 75%, 52%);
+  padding: 13px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+body main .card__button:hover {
+  background-color: hsl(224deg, 23%, 55%);
+}
+body main .card__button--cancel {
+  background-color: white;
+  color: hsl(224deg, 23%, 55%);
+}
+body main .card__button--cancel:hover {
+  background-color: white;
+  color: black;
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+body .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
