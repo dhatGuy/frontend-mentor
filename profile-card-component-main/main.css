@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* [1] Break words when there is enough space */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  overflow-wrap: break-word; /* [1] */
+}
+
+/*
+[1] Set a maximum width for an image
+[2] Let the image cover its bounding box to avoid distortion.
+*/
+img {
+  max-width: 100%; /* [1] */
+  -o-object-fit: cover;
+     object-fit: cover; /* [2] */
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat no-repeat;
+  background-position: right 48vw bottom 40vh, left 45vw top 44vh;
+  background-color: hsl(185deg, 75%, 39%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+}
+body .card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+body .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+body .card__name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(229deg, 23%, 23%);
+  margin-bottom: 0.5rem;
+}
+body .card__age {
+  font-weight: 400;
+  color: hsl(227deg, 10%, 46%);
+  margin-bottom: 1rem;
+}
+body .card__location {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: hsl(227deg, 10%, 46%);
+  margin-bottom: 1rem;
+}
+body .card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem;
+  border-top: 1px solid hsla(227deg, 10%, 46%, 0.2);
+}
+body .card__image {
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-top: -3.25rem;
+  margin-bottom: 1.2rem;
+}
+body .card__stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+body .card__number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(229deg, 23%, 23%);
+}
+body .card__text {
+  font-size: 0.7rem;
+  letter-spacing: 0.15rem;
+  font-weight: 400;
+  color: hsl(227deg, 10%, 46%);
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+body .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
