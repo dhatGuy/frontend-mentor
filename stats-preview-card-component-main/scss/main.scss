@@ -34,6 +34,11 @@ body {
 
     &__image {
       position: relative;
+      display: flex;
+
+      img {
+        height: 100%;
+      }
 
       &::before {
         content: "";

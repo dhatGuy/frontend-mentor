@@ -104,6 +104,10 @@ body .card {
 }
 body .card__image {
   position: relative;
+  display: flex;
+}
+body .card__image img {
+  height: 100%;
 }
 body .card__image::before {
   content: "";
