@@ -97,10 +97,12 @@ body .card {
 }
 @media screen and (min-width: 768px) {
   body .card {
-    max-width: 45rem;
+    max-width: 60rem;
     flex-direction: row-reverse;
-    padding: 1rem;
   }
+}
+body .card > div {
+  flex: 1;
 }
 body .card__image {
   position: relative;
@@ -130,6 +132,7 @@ body .card__content {
 }
 @media screen and (min-width: 768px) {
   body .card__content {
+    padding: 3rem;
     text-align: left;
   }
 }
