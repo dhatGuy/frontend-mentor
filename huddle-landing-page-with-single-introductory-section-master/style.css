@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: hsl(257deg, 40%, 49%);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+  }
+}
+body .hero {
+  padding: 1.6rem;
+  text-align: center;
+  color: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+@media (min-width: 1024px) {
+  body .hero {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+}
+body .hero__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 2;
+}
+@media screen and (min-width: 1024px) {
+  body .hero__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+body .hero__image {
+  flex: 1;
+}
+body .hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 30rem;
+}
+@media screen and (min-width: 1024px) {
+  body .hero__text {
+    padding-top: 4rem;
+    align-self: flex-start;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+body .hero__head {
+  align-self: flex-start;
+  width: 35vw;
+}
+body .hero__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+}
+body .hero__subtitle {
+  color: gainsboro;
+}
+body .hero__cta {
+  font-size: 0.8rem;
+  padding: 0.7rem 4rem;
+  background-color: #fff;
+  color: hsl(300deg, 69%, 71%);
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 2rem;
+}
+body .hero__cta:hover {
+  background-color: hsl(300deg, 69%, 71%);
+  color: #fff;
+}
+body .hero__socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  body .hero__socials {
+    align-self: flex-end;
+  }
+}
+body .hero__socials > * {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  padding: 0.3rem;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .hero__socials > *:hover {
+  color: hsl(300deg, 69%, 71%);
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+body .attribution a {
+  color: gainsboro;
+}

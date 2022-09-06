@@ -1,33 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/e63dccc6aa.js"
+      crossorigin="anonymous"
+    ></script>
 
-  Build The Community Your Fans Will Love
+    <link rel="stylesheet" href="style.css" />
 
-  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-  Create connections with your users as you engage in genuine discussion. 
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
+  </head>
+  <body>
+    <main class="hero">
+      <section class="hero__head">
+        <img src="./images/logo.svg" alt="logo" class="hero__img" />
+      </section>
+      <section class="hero__body">
+        <div class="hero__image">
+          <img src="./images/illustration-mockups.svg" alt="mockups" />
+        </div>
+        <div class="hero__text">
+          <h1 class="hero__title">Build The Community Your Fans Will Love</h1>
+          <p class="hero__subtitle">
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <button type="button" class="hero__cta">Register</button>
+        </div>
+      </section>
+      <section class="hero__socials">
+        <a href="#" title="facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" title="twitter">
+          <i class="fa-brands fa-circle fa-twitter"></i>
+        </a>
+        <a href="#" title="instagram">
+          <i class="fa-brands fa-circle fa-instagram"></i>
+        </a>
+      </section>
+    </main>
 
-  Register
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a
+          rel="noopener"
+          href="https://www.frontendmentor.io?ref=dhatguy"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.github.com/dhatguy">dhatGuy</a>.
+      </p>
+    </footer>
+  </body>
 </html>
