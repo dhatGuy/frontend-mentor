@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import "./variables";
+
+@mixin flex($direction: row, $justify: null, $align: null, $gap: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+body {
+  font-family: $karla;
+  line-height: 1.5;
+  color: $grayishBlue;
+  background-color: $lightGray;
+
+  @include flex(column);
+}
+
+.container {
+  display: grid;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  max-width: 20.75rem;
+  margin: auto;
+
+  @media (min-width: 768px) {
+    max-width: 40rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(10rem, auto));
+
+    > div {
+      justify-content: initial;
+      padding: 2rem;
+    }
+  }
+}
+
+.community {
+  @include flex(column, center, $gap: 1rem);
+
+  padding: 1.5rem;
+  background-color: white;
+  font-weight: 700;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    color: $cyan;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    color: $brightYellow;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    color: $grayishBlue;
+    line-height: 1.6rem;
+    font-weight: normal;
+  }
+}
+
+.subscription {
+  @include flex(column, center, $gap: 1.2rem);
+
+  padding: 1.5rem;
+  background-color: $cyan;
+  color: $lightGray;
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__price {
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    @include flex($align: center, $gap: 0.5rem);
+
+    span {
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: rgba(255, 255, 255, 0.484);
+    }
+  }
+
+  &__button {
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: $brightYellow;
+    color: $lightGray;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+.why-us {
+  @include flex(column, center);
+
+  padding: 1.5rem;
+  background-color: $off-cyan;
+  color: $lightGray;
+
+  &__title {
+    font-size: 1.2rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+
+    > * {
+      font-size: smaller;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}

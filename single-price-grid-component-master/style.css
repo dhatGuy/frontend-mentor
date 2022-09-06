@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  font-family: "Karla", sans-serif;
+  line-height: 1.5;
+  color: hsl(218deg, 22%, 67%);
+  background-color: hsl(204deg, 43%, 93%);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: grid;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  max-width: 20.75rem;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 40rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(10rem, auto));
+  }
+  .container > div {
+    justify-content: initial;
+    padding: 2rem;
+  }
+}
+
+.community {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: white;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .community {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+}
+.community__title {
+  font-size: 1.2rem;
+  color: hsl(179deg, 62%, 43%);
+}
+.community__subtitle {
+  font-size: 1rem;
+  color: hsl(71deg, 73%, 54%);
+}
+.community__description {
+  font-size: 0.9rem;
+  color: hsl(218deg, 22%, 67%);
+  line-height: 1.6rem;
+  font-weight: normal;
+}
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  background-color: hsl(179deg, 62%, 43%);
+  color: hsl(204deg, 43%, 93%);
+}
+.subscription__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.subscription__price {
+  font-size: 1.7rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.subscription__price span {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.484);
+}
+.subscription__button {
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: hsl(71deg, 73%, 54%);
+  color: hsl(204deg, 43%, 93%);
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.why-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: hsla(179deg, 62%, 43%, 0.632);
+  color: hsl(204deg, 43%, 93%);
+}
+.why-us__title {
+  font-size: 1.2rem;
+}
+.why-us__list {
+  list-style: none;
+  padding: 0;
+}
+.why-us__list > * {
+  font-size: smaller;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
